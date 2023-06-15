@@ -1,0 +1,36 @@
+We can start with node A and we have 2 paths.
+
+The first is from A to B with a length of 5
+And from A to C with length 3.
+
+So we can write in the adjacent list with the visited vertices 2 new vertices (B, C) and the weight to get there.
+
+Then, as said earlier - we will choose the path from A -> C.
+
+When accessing vertex C, we can see that there are 3 different paths:
+
+The first path is C to B
+The second path is C to D
+The third path is C to E
+
+So write to a list of two new vertices and choose the shortest path as C to B.
+
+Now at B we have 3 lines:
+
+B to D
+B to E
+And B goes back to C
+
+We choose the shortest path B to D and we update the new weighted list of paths from A to the other vertices.
+
+Now as we can see there is no new path from D to E.
+
+In that case, we go back to the previous vertex to check the shortest path.
+
+Now there is a path of length 4 going to E and a path going to C.
+
+In this case, we choose any path we like.
+
+Finally, we can see that any alternative we take on the path from A to E has the same weight because the shortest paths are recorded in the list.
+
+Finally, we can see all the paths that we have used.
